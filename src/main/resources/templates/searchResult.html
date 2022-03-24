@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 data-th-text="${pokemonName}"></h1>
+                    <!-- <div class="container"></div> -->
+                        <div class="row">
+                            <div class="col">
+                                <img th:src="${image}" width="200" height="200">
+                                <img th:src="${image2}" width="200" height="200">
+                                <!-- <img th:src="${image3}" width="200" height="200">
+                                <img th:src="${image4}" width="200" height="200">
+                                <img th:src="${image5}" width="200" height="200"> -->
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
