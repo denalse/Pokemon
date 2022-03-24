@@ -1,5 +1,7 @@
 package sg.edu.nus.iss.app.day8Pokemon.controller;
 
+import java.util.ArrayList;
+
 import org.slf4j.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import sg.edu.nus.iss.app.day8Pokemon.service.pokemonService;
 @RequestMapping(path="/pokemon")
 public class pokemonController {
     private Logger logger = LoggerFactory.getLogger(pokemonController.class);
+    
     @Autowired
     private pokemonService pokemonSvc;
 
@@ -27,7 +30,7 @@ public class pokemonController {
     public String search(
         @RequestParam (name= "pokemon_name")  String pokemonName, Model model) {
 
-        String result = pokemonSvc.getPokemonByName(pokemonName);
+        ArrayList<String> result = pokemonSvc.getPokemonByName(pokemonName);
         logger.info(" Result >>> " + "\r\n" + result);
         System.out.printf(">>>>>>>> %s\n", result);
 

@@ -2,6 +2,8 @@ package sg.edu.nus.iss.app.day8Pokemon.service;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
+
 import org.slf4j.*;
 
 import org.springframework.http.MediaType;
@@ -20,7 +22,7 @@ import jakarta.json.JsonReader;
 public class pokemonService {
     Logger logger = LoggerFactory.getLogger(pokemonService.class);
 
-    public String getPokemonByName(String pokemonName) {
+    public ArrayList<String> getPokemonByName(String pokemonName) {
         
     
         String url = "https://pokeapi.co/api/v2/pokemon/" + pokemonName;
@@ -81,14 +83,22 @@ public class pokemonService {
             //     .getJsonObject("crystal") //key
             //     .getString("back_default");
             //     System.out.printf(">img>>> %s\n", image5);
-    
+        // public ArrayList<String> Pokemon {
+            ArrayList<String> pokemonUrl = new ArrayList<String>();
+            pokemonUrl.add(image);
+            pokemonUrl.add(image2);
+            // pokemonUrl.add(image3);
+            // pokemonUrl.add(image4);
+            // pokemonUrl.add(image5);
+            System.out.println("URL >>>>>" + pokemonUrl);
+        
             logger.info("Image >>> " + image);
             logger.info("Image2 >>> " + image2);
             // logger.info("Image >>> " + image3);
             // logger.info("Image >>> " + image4);
             // logger.info("Image >>> " + image5);
 
-            return image + image2;
+            return pokemonUrl;
             // return image + image2 + image3 + image4 + image5;
 
         } catch (Exception ex) {

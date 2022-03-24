@@ -15,11 +15,12 @@
                     <!-- <div class="container"></div> -->
                         <div class="row">
                             <div class="col">
-                                <img th:src="${image}" width="200" height="200">
-                                <img th:src="${image2}" width="200" height="200">
-                                <!-- <img th:src="${image3}" width="200" height="200">
-                                <img th:src="${image4}" width="200" height="200">
-                                <img th:src="${image5}" width="200" height="200"> -->
+                                <table>
+                                    <tr th:each="pokemonUrl: ${pokemonName}">
+                                        <td img th:src="${pokemonUrl}"></td>
+                                    </tr>
+                                </table>
+                                <!-- <img th:src="${pokemonUrl}" width="200" height="200"> -->
 
                             </div>
                         </div>
