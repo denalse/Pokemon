@@ -46,55 +46,55 @@ public class pokemonService {
                 .getJsonObject("generation-i") //key
                 .getJsonObject("red-blue") //key
                 .getString("front_default"); //value
-                System.out.printf(">img>>> %s\n", image);
+                System.out.printf("\r\n img>>> %s\n", image);
 
                 //get string because is the last part which is the url which is the key
                //globalImg = image;
             System.out.println(" ");
 
-            System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("back_shiny"));
+            System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_shiny"));
             String image2 = object.getJsonObject("sprites")
                 .getJsonObject("versions") //key
                 .getJsonObject("generation-ii") //key
                 .getJsonObject("crystal") //key
                 .getString("back_shiny");
-                System.out.printf(">img>>> %s\n", image2);
+                System.out.printf("\r\n img>>> %s\n", image2);
 
-            // // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
-            // String image3 = object.getJsonObject("sprites")
-            //     .getJsonObject("versions") //key
-            //     .getJsonObject("generation-ii") //key
-            //     .getJsonObject("crystal") //key
-            //     .getString("back_default");
-            //     System.out.printf(">img>>> %s\n", image3);
+            // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
+            String image3 = object.getJsonObject("sprites")
+                .getJsonObject("versions") //key
+                .getJsonObject("generation-iii") //key
+                .getJsonObject("emerald") //key
+                .getString("front_default");
+                System.out.printf(">img>>> %s\n", image3);
 
-            // // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
-            // String image4 = object.getJsonObject("sprites")
-            //     .getJsonObject("versions") //key
-            //     .getJsonObject("generation-ii") //key
-            //     .getJsonObject("crystal") //key
-            //     .getString("back_default");
-            // System.out.printf(">img>>> %s\n", image4);
+            // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
+            String image4 = object.getJsonObject("sprites")
+                .getJsonObject("versions") //key
+                .getJsonObject("generation-iv") //key
+                .getJsonObject("diamond-pearl") //key
+                .getString("back_shiny");
+            System.out.printf(">img>>> %s\n", image4);
 
-            // // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
-            // String image5 = object.getJsonObject("sprites")
-            //     .getJsonObject("versions") //key
-            //     .getJsonObject("generation-ii") //key
-            //     .getJsonObject("crystal") //key
-            //     .getString("back_default");
-            //     System.out.printf(">img>>> %s\n", image5);
-        // public ArrayList<String> Pokemon {
+            // System.out.println(object.getJsonObject("sprites").getJsonObject("versions").getJsonObject("generation-ii").getJsonObject("crystal").getJsonString("front_default"));
+            String image5 = object.getJsonObject("sprites")
+                .getJsonObject("versions") //key
+                .getJsonObject("generation-ii") //key
+                .getJsonObject("crystal") //key
+                .getString("front_default");
+                System.out.printf(">img>>> %s\n", image5);
+
             ArrayList<String> pokemonUrl = new ArrayList<String>();
             pokemonUrl.add(image);
             pokemonUrl.add(image2);
-            // pokemonUrl.add(image3);
-            // pokemonUrl.add(image4);
-            // pokemonUrl.add(image5);
+            pokemonUrl.add(image3);
+            pokemonUrl.add(image4);
+            pokemonUrl.add(image5);
             System.out.println("URL >>>>>" + pokemonUrl);
         
-            logger.info("Image >>> " + image);
+            logger.info("\r\n Image >>> " + image);
             logger.info("Image2 >>> " + image2);
-            // logger.info("Image >>> " + image3);
+            logger.info("Image >>> " + image3);
             // logger.info("Image >>> " + image4);
             // logger.info("Image >>> " + image5);
 

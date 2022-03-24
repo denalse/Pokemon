@@ -31,8 +31,8 @@ public class pokemonController {
         @RequestParam (name= "pokemon_name")  String pokemonName, Model model) {
 
         ArrayList<String> result = pokemonSvc.getPokemonByName(pokemonName);
-        logger.info(" Result >>> " + "\r\n" + result);
-        System.out.printf(">>>>>>>> %s\n", result);
+        logger.info("\r\n Result >>> " + "\r\n" + result);
+        // System.out.printf(">>>>>>>> %s\n", result);
 
         // String result2 = pokemonSvc.getPokemonByName(pokemonName);
         // logger.info("Result2 >>> " + result2);
@@ -40,8 +40,6 @@ public class pokemonController {
 
         model.addAttribute("pokemonName", pokemonName.toUpperCase());
         model.addAttribute("image", result);
-        // model.addAttribute("image2", result2);
-
 
         return "searchResult";
     }
